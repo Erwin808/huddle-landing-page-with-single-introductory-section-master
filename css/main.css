@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Violet);
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 50px;
+    background-image: url(../images/bg-desktop.svg);
+}
+.logo {
+    margin-bottom: 75px;
+}
+.box2 {
+    position: relative;
+    padding: 100px;
+}
+.box2 p:first-child {
+    width: 450px;
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.6;
+    word-spacing: 2px;
+    margin: 90px 0 25px;
+}
+.box2 p:last-of-type {
+    width: 460px;
+    color: white;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+}
+.box2 > button {
+    width: 200px;
+    height: 55px;
+    font-size: large;
+    color: var(--Violet);
+    background-color: white;
+    border-radius: 40px;
+    border: none;
+    margin-top: 20px;
+    box-shadow: 0px 3px 16px 0px #0000008c;
+}
+.box2 > button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+.icons {
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+}
+.icons i {
+    color: white;
+    font-size: large;
+}
+.icons button:hover i{
+    color: var(--Soft-Magenta);
+}
+.icons button {
+    background-color: var(--Violet);
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.icons button:hover {
+    border-color: var(--Soft-Magenta);
+}
+/* Mobile screen */
+@media (max-width: 427px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background-image: url(../images/bg-mobile.svg);
+    }
+    .box1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        width: 120px;
+        margin-bottom: 50px;
+    }
+    .box1 :last-child {
+        max-width: 300px;
+        align-self: center;
+    }
+    .box2 {
+        max-height: 440px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .box2 p:first-child {
+        max-width: 260px;
+        margin: 50px 0 10px;
+        font-size: 24px;
+        text-align: center;
+    }
+    .box2 p:last-of-type {
+        max-width: 300px;
+        padding: 0;
+        text-align: center;
+    }
+    .box2 > button {
+        height: 40px;
+    }
+    .icons {
+        position: static;
+        margin-top: 75px;
+    }
+}
